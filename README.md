@@ -44,7 +44,7 @@ python demo.py
 from src import Abliterator
 
 # Load any HuggingFace model
-abl = Abliterator("meta-llama/Llama-2-7b-chat-hf", device="cuda")
+abl = Abliterator("HuggingFaceTB/SmolLM-360M", device="cuda")
 
 # Cache activations on harmful/harmless prompts
 abl.cache_activations()

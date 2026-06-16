@@ -3,7 +3,7 @@
 Syablit Demo - Quick abliteration example.
 
 Usage:
-    python demo.py --model TinyLlama/TinyLlama-1.1B-Chat-v1.0
+    python demo.py --model HuggingFaceTB/SmolLM-360M
     python demo.py --model meta-llama/Llama-2-7b-chat-hf --strength 0.8
 """
 
@@ -22,7 +22,7 @@ def main():
     parser.add_argument(
         "--model",
         type=str,
-        default="TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+        default="HuggingFaceTB/SmolLM-360M",
         help="HuggingFace model name or local path",
     )
     parser.add_argument(
