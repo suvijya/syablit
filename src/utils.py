@@ -1,16 +1,9 @@
-import torch
+"""Utility functions."""
 import gc
-
-from enum import Enum
-
+import torch
 
 def clear_mem():
+    """Clear GPU/CPU memory."""
     gc.collect()
-    torch.cuda.empty_cache()
-
-
-class LayerOutput(Enum):
-    RESIDUAL_PRE = "residual pre"
-    RESIDUAL_POST = "residual post"
-    MLP_POST = "mlp post"
-    ATTN_POST = "attn post"
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
